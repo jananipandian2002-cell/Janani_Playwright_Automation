@@ -49,7 +49,7 @@ from playwright.sync_api import expect
 
 def test_username_input(page):
     page.goto("https://www.playwrightautomation.com/practice.html")
-    name_input = page.get_by_placeholder("Enter your name")
+    name_input = page.get_by_test_id("input-name")
     name_input.fill("Vikas")
     expect(name_input).to_have_value("Vikas")
 
